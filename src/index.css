@@ -4,7 +4,9 @@
 @plugin "tailwindcss-animate";
 
 @theme {
-  --font-gg: "gg sans", sans-serif;
+  --font-gg: 'gg sans Medium', sans-serif;
+  --font-gg-semibold: 'gg sans SemiBold', sans-serif;
+  --font-gg-bold: 'gg sans', sans-serif;
 
   --color-slate-1: #121214;
   --color-slate-2: #1A1A1E;

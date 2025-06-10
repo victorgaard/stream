@@ -41,7 +41,7 @@ const SidebarButton: React.FC<SidebarButtonProps> = ({
 }) => {
   return (
     <div className="flex w-full items-center justify-between">
-      <Tooltip content={tooltip} side="right" sideOffset={8}>
+      <Tooltip content={tooltip} side="right" sideOffset={8} className="text-base">
         <div className="group flex items-center gap-3">
           <div
             className={cn(

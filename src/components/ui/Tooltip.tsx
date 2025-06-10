@@ -21,14 +21,18 @@ export const Tooltip: React.FC<TooltipProps> = ({
         <TooltipRadix.Portal>
           <TooltipRadix.Content
             className={cn(
-              "bg-slate-7 border-slate-8 text-slate-11 rounded-lg border px-3 py-1",
+              "bg-slate-7 border-slate-8 text-slate-11 font-gg rounded-lg border px-3 py-1 text-sm",
               className,
             )}
             {...props}
           >
             {content}
-            <TooltipRadix.Arrow className="fill-slate-8 absolute -left-[4px] w-[13px]" />
-            <TooltipRadix.Arrow className="fill-slate-7 -translate-y-[1px]" />
+            {props.side === "right" && (
+              <>
+                <TooltipRadix.Arrow className="fill-slate-8 absolute -left-[4px] w-[13px]" />
+                <TooltipRadix.Arrow className="fill-slate-7 -translate-y-[1px]" />
+              </>
+            )}
           </TooltipRadix.Content>
         </TooltipRadix.Portal>
       </TooltipRadix.Root>
