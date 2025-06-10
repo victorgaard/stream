@@ -1,18 +1,23 @@
+import { Content } from "./Content";
 import { Header } from "./Header";
 import { Sidebar } from "./Sidebar";
 
-export const Dashboard = () => {
+const Layout: React.FC<React.PropsWithChildren> = ({ children }) => {
   return (
     <main className="bg-slate-1 text-slate-11 grid min-h-dvh text-sm antialiased">
-      <div className="flex flex-col">
-        <Header />
-        <div className="flex h-full">
-         <Sidebar />
-          <section className="border-slate-4 flex-1 rounded-tl-xl border p-4">
-            Body
-          </section>
-        </div>
-      </div>
+      <div className="flex flex-col">{children}</div>
     </main>
+  );
+};
+
+export const Dashboard = () => {
+  return (
+    <Layout>
+      <Header />
+      <div className="flex h-full">
+        <Sidebar />
+        <Content />
+      </div>
+    </Layout>
   );
 };
