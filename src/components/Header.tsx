@@ -1,5 +1,5 @@
 import { HelpIcon } from "./icons/HelpIcon";
-import { InboxIcon } from "./icons/Inbox";
+import { InboxIcon } from "./icons/InboxIcon";
 
 export const Header = () => {
   return (
@@ -8,9 +8,9 @@ export const Header = () => {
       <div className="flex items-center gap-2">
         <img
           src="./stream.png"
-          width={20}
-          height={20}
-          className="size-5 rounded"
+          width={16}
+          height={16}
+          className="size-4 rounded"
         />
         Stream
       </div>
