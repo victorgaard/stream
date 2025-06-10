@@ -1,5 +1,5 @@
 function App() {
-  return <main className="bg-amber-100 text-red-300">Hello world</main>;
+  return <main className="font-gg bg-surface-1 min-h-dvh antialiased"></main>;
 }
 
 export default App;
