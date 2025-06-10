@@ -1,20 +1,22 @@
 @import url("https://fonts.cdnfonts.com/css/gg-sans-2");
 @import "tailwindcss";
+@plugin "tailwindcss-animate";
 
 @theme {
   --font-gg: "gg sans", sans-serif;
-  
+
   --color-slate-1: #121214;
   --color-slate-2: #1A1A1E;
   --color-slate-3: #222327;
-
-  --color-slate-5: #1D1D20;
-  --color-slate-6: #222225;
-  --color-slate-7: #29292E;
-
-  --color-slate-10: #82838B;
-  --color-slate-11: #AAAAB1;
-  --color-slate-12: #EFEFF0;
-
+  --color-slate-4: #1D1D20;
+  --color-slate-5: #222225;
+  --color-slate-6: #29292E;
+  --color-slate-7: #242429;
+  --color-slate-8: #323237;
+  --color-slate-9: #82838B;
+  --color-slate-10: #AAAAB1;
+  --color-slate-11: #EFEFF0;
+  --color-slate-12: #FBFBFB;
+  
   --color-discord: #5865F2;
 }
