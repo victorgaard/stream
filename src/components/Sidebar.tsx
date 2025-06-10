@@ -5,12 +5,14 @@ type SidebarButtonProps = {
   name: string;
   avatar?: string;
   tooltip: string;
+  isDiscord?: boolean;
   isSelected?: boolean;
 };
 
 const Avatar: React.FC<Omit<SidebarButtonProps, "tooltip">> = ({
   avatar,
   name,
+  isDiscord,
   isSelected,
 }) => {
   if (!avatar) return <span className="text-lg">{name[0]}</span>;
@@ -20,9 +22,10 @@ const Avatar: React.FC<Omit<SidebarButtonProps, "tooltip">> = ({
       src={avatar}
       width={22.15}
       className={cn(
-        "w-[22.150px] translate-y-[0.25px] opacity-90 transition-colors",
+        "size-40",
         {
           "opacity-100": isSelected,
+          "w-[22.150px] translate-y-[0.25px] opacity-90 transition-colors": isDiscord
         },
       )}
     />
@@ -33,6 +36,7 @@ const SidebarButton: React.FC<SidebarButtonProps> = ({
   name,
   avatar,
   tooltip,
+  isDiscord = false,
   isSelected = false,
 }) => {
   return (
@@ -49,13 +53,18 @@ const SidebarButton: React.FC<SidebarButtonProps> = ({
           />
           <button
             className={cn(
-              "bg-slate-4 group hover:bg-discord relative flex size-10 cursor-pointer flex-col items-center justify-center rounded-xl transition-colors",
+              "bg-slate-4 group overflow-clip group-hover:bg-discord relative flex size-10 cursor-pointer flex-col items-center justify-center rounded-xl transition-colors",
               {
                 "bg-discord": isSelected,
               },
             )}
           >
-            <Avatar name={name} avatar={avatar} isSelected={isSelected} />
+            <Avatar
+              name={name}
+              avatar={avatar}
+              isSelected={isSelected}
+              isDiscord={isDiscord}
+            />
           </button>
         </div>
       </Tooltip>
@@ -72,8 +81,15 @@ export const Sidebar = () => {
         name="Discord"
         avatar="./discord.svg"
         tooltip="Direct messages"
+        isDiscord
       />
       <div className="bg-slate-4 h-[1px] w-8" />
+      <SidebarButton
+        name="Stream"
+        avatar="./stream.png"
+        tooltip="Stream"
+        isSelected
+      />
     </nav>
   );
 };
