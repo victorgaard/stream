@@ -4,7 +4,17 @@
 @theme {
   --font-gg: "gg sans", sans-serif;
   
-  --color-surface-1: #121214;
-  --color-surface-2: #1A1A1E;
-  --color-surface-3: #222327;
+  --color-slate-1: #121214;
+  --color-slate-2: #1A1A1E;
+  --color-slate-3: #222327;
+
+  --color-slate-5: #1D1D20;
+  --color-slate-6: #222225;
+  --color-slate-7: #29292E;
+
+  --color-slate-10: #82838B;
+  --color-slate-11: #AAAAB1;
+  --color-slate-12: #EFEFF0;
+
+  --color-discord: #5865F2;
 }
