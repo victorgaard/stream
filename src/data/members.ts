@@ -12,7 +12,7 @@ type Activity = {
 
 type Status = "online" | "idle" | "busy" | "offline";
 
-type Member = {
+export type Member = {
   id: number;
   name: string;
   avatar: string;

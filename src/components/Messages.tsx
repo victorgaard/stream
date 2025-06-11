@@ -2,27 +2,27 @@ import { members } from "../data/members";
 import { PlusCircleIcon } from "./icons/PlusCircleIcon";
 import { Avatar } from "./ui/Avatar";
 
-export const Messages = () => {
-  const date = new Date().setDate(9);
+const date = new Date().setDate(9);
 
-  const dateInDigits = Intl.DateTimeFormat("pt-BR", {
-    month: "2-digit",
-    day: "2-digit",
-    year: "2-digit",
-  }).format(date);
+const dateInDigits = Intl.DateTimeFormat("pt-BR", {
+  month: "2-digit",
+  day: "2-digit",
+  year: "2-digit",
+}).format(date);
 
-  const friendlyDate = Intl.DateTimeFormat("en-GB", {
-    dateStyle: "medium",
-  }).format(date);
+const friendlyDate = Intl.DateTimeFormat("en-GB", {
+  dateStyle: "medium",
+}).format(date);
 
-  const time = new Intl.DateTimeFormat("en-US", {
-    hour: "2-digit",
-    minute: "2-digit",
-    hour12: false,
-  }).format(date);
+const time = new Intl.DateTimeFormat("en-US", {
+  hour: "2-digit",
+  minute: "2-digit",
+  hour12: false,
+}).format(date);
 
-  const user = members[0];
+const user = members[0];
 
+export const Messages: React.FC = () => {
   return (
     <div className="bg-slate-2 flex flex-1 flex-col justify-end">
       <div className="px-4 pb-2">
@@ -49,10 +49,10 @@ export const Messages = () => {
             <div className="font-gg-normal text-slate-12 flex flex-col gap-3.5 text-base">
               <p>Hi there Stream team 👋</p>
               <p>
-                For this assignment, I picked a Discord feature to showcase, the
-                profile card. Discord is a product I use daily and I love so
-                many things about it. The profile card in particular is a great
-                way for users to express themselves.
+                For this assignment, I picked the profile card feature from
+                Discord. Discord is a product I use daily and I love so many
+                things about it. The profile card in particular is a great way
+                for users to express themselves.
               </p>
               <p>
                 You can find the profile card by clicking in my name, avatar, or
@@ -69,7 +69,9 @@ export const Messages = () => {
                   https://github.com/victorgaard/stream
                 </a>
               </p>
-              <p>ps: got a little carried away mocking the discord shell lol 🙈</p>
+              <p>
+                ps: got a little carried away mocking the discord shell lol 🙈
+              </p>
             </div>
           </div>
         </div>

@@ -4,7 +4,7 @@ import { Members } from "./Members";
 import { Messages } from "./Messages";
 import { Tooltip } from "./ui/Tooltip";
 
-const Channels = () => {
+const Channels: React.FC = () => {
   return (
     <div className="hidden w-[304px] flex-col gap-1 p-2 lg:flex">
       <div className="text-slate-9 pointer-events-none flex h-6 items-center gap-1 px-2 select-none">
@@ -18,7 +18,7 @@ const Channels = () => {
   );
 };
 
-const Header = () => {
+const Header: React.FC = () => {
   return (
     <div className="flex items-center">
       <div className="border-slate-5 hidden h-12 w-[304px] items-center justify-between border-b px-4 lg:flex">
@@ -44,7 +44,7 @@ const Header = () => {
   );
 };
 
-export const Content = () => {
+export const Content: React.FC = () => {
   return (
     <section className="border-slate-4 flex flex-1 flex-col overflow-clip rounded-tl-xl border">
       <Header />

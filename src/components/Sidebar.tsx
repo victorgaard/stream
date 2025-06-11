@@ -75,7 +75,7 @@ const SidebarButton: React.FC<SidebarButtonProps> = ({
   );
 };
 
-export const Sidebar = () => {
+export const Sidebar: React.FC = () => {
   return (
     <nav className="flex w-[72px] shrink-0 flex-col items-center gap-2">
       <SidebarButton

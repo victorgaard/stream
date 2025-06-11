@@ -34,7 +34,7 @@ const statusVariants = cva("rounded-full absolute -right-1.5 -bottom-1.5", {
       offline: "",
     },
     size: {
-      sm: "scale-90",
+      sm: "scale-[85%]",
       md: "scale-[105%]",
       lg: "scale-[185%]",
     },

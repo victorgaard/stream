@@ -10,7 +10,7 @@ const Layout: React.FC<React.PropsWithChildren> = ({ children }) => {
   );
 };
 
-export const Dashboard = () => {
+export const Dashboard: React.FC = () => {
   return (
     <Layout>
       <Header />

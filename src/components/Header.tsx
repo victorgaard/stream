@@ -2,7 +2,7 @@ import { HelpIcon } from "./icons/HelpIcon";
 import { InboxIcon } from "./icons/InboxIcon";
 import { Tooltip } from "./ui/Tooltip";
 
-export const Header = () => {
+export const Header: React.FC = () => {
   return (
     <header className="flex h-8 shrink-0 items-center justify-between px-4.5">
       <div className="w-16" />
