@@ -64,7 +64,7 @@ export const Messages: React.FC = () => {
                 <a
                   href="https://github.com/victorgaard/stream"
                   target="_blank"
-                  className="text-anchor hover:underline"
+                  className="text-link hover:underline"
                 >
                   https://github.com/victorgaard/stream
                 </a>

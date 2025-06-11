@@ -28,9 +28,9 @@ const Icon: React.FC<IconProps> = ({ status, className }) => {
 const statusVariants = cva("rounded-full absolute -right-1.5 -bottom-1.5", {
   variants: {
     status: {
-      online: "text-online",
-      idle: "text-idle",
-      busy: "text-busy",
+      online: "text-success",
+      idle: "text-warning",
+      busy: "text-danger",
       offline: "",
     },
     size: {

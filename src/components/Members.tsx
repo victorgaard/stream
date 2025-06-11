@@ -1,5 +1,7 @@
-import { members, type Member } from "../data/members";
+import { members, type Activity, type Member } from "../data/members";
 import { cn } from "../utils/cn";
+import { MusicNoteIcon } from "./icons/MusicNoteIcon";
+import { VideoGameController } from "./icons/VideoGameController";
 import { AvatarWithStatus } from "./ui/AvatarWithStatus";
 
 const { onlineMembers, offlineMembers } = members.reduce(
@@ -17,6 +19,28 @@ const { onlineMembers, offlineMembers } = members.reduce(
   },
 );
 
+const ICON_MAP: Record<Activity["type"], React.ElementType> = {
+  listening: MusicNoteIcon,
+  playing: VideoGameController,
+};
+
+const Activity: React.FC<{ activity: Activity | undefined }> = ({
+  activity,
+}) => {
+  if (!activity) return null;
+
+  const Icon = ICON_MAP[activity.type];
+
+  return (
+    <p className="flex items-center gap-[2.5px] text-xs leading-tight">
+      <Icon className="text-success mr-0.5 size-3" />
+      <span className="capitalize">{activity.type}</span>{" "}
+      {activity.type === "listening" && "to"}{" "}
+      <span className="font-gg-bold">{activity.metadata.title}</span>
+    </p>
+  );
+};
+
 const MemberButton: React.FC<Member> = ({ name, avatar, status, activity }) => {
   return (
     <button
@@ -30,12 +54,7 @@ const MemberButton: React.FC<Member> = ({ name, avatar, status, activity }) => {
       <AvatarWithStatus size="sm" name={name} src={avatar} status={status} />
       <div className="text-left">
         <p className="leading-tight">{name}</p>
-        {activity && (
-          <p className="text-xs leading-tight">
-            <span className="capitalize">{activity?.type}</span>{" "}
-            {activity.type === "listening" && "to"} <span className="font-gg-bold">{activity?.metadata.title}</span>
-          </p>
-        )}
+        <Activity activity={activity} />
       </div>
     </button>
   );

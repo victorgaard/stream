@@ -5,7 +5,7 @@ type Metadata = {
   picture: string;
 };
 
-type Activity = {
+export type Activity = {
   type: "playing" | "listening";
   metadata: Metadata;
 };
