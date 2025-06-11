@@ -36,7 +36,7 @@ const statusVariants = cva("rounded-full absolute -right-1.5 -bottom-1.5", {
     size: {
       sm: "scale-[85%]",
       md: "scale-[105%]",
-      lg: "scale-[185%]",
+      lg: "scale-[145%] right-0 bottom-0",
     },
   },
   defaultVariants: {
@@ -65,7 +65,7 @@ export const AvatarWithStatus: React.FC<AvatarWithStatusProps> = ({
           {
             "[mask-image:radial-gradient(circle_at_calc(100%-5px)_calc(100%-5px),transparent_22%,black_0)]":
               status !== "offline",
-            "[mask-image:radial-gradient(circle_at_calc(100%-4px)_calc(100%-4px),transparent_20%,black_0)]":
+            "[mask-image:radial-gradient(circle_at_calc(100%-9px)_calc(100%-9px),transparent_15%,black_0)]":
               size === "lg" && status !== "offline",
           },
           className,
