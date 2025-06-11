@@ -1,19 +1,42 @@
 import { cva, type VariantProps } from "class-variance-authority";
 import { Avatar, type AvatarProps } from "./Avatar";
 import { cn } from "../../utils/cn";
+import { CircleIcon } from "../icons/CircleIcon";
+import { MoonIcon } from "../icons/MoonIcon";
+import { CircleWithMinusIcon } from "../icons/CircleWithMinusIcon";
 
-const statusVariants = cva("rounded-full absolute right-0 bottom-0", {
+const ICON_MAP: Record<
+  Exclude<NonNullable<StatusVariant["status"]>, "offline">,
+  React.ElementType
+> = {
+  online: CircleIcon,
+  idle: MoonIcon,
+  busy: CircleWithMinusIcon,
+};
+
+type IconProps = {
+  status: StatusVariant["status"];
+  className?: string;
+};
+
+const Icon: React.FC<IconProps> = ({ status, className }) => {
+  if (!status || status === "offline") return null;
+  const Icon = ICON_MAP[status];
+  return <Icon className={className} />;
+};
+
+const statusVariants = cva("rounded-full absolute -right-1.5 -bottom-1.5", {
   variants: {
     status: {
-      online: "bg-online",
-      idle: "bg-idle",
-      busy: "bg-busy",
+      online: "text-online",
+      idle: "text-idle",
+      busy: "text-busy",
       offline: "",
     },
     size: {
-      sm: "size-2.5",
-      md: "size-3",
-      lg: "size-4",
+      sm: "scale-90",
+      md: "scale-[105%]",
+      lg: "scale-[185%]",
     },
   },
   defaultVariants: {
@@ -22,7 +45,8 @@ const statusVariants = cva("rounded-full absolute right-0 bottom-0", {
   },
 });
 
-type AvatarWithStatusProps = AvatarProps & VariantProps<typeof statusVariants>;
+type StatusVariant = VariantProps<typeof statusVariants>;
+type AvatarWithStatusProps = AvatarProps & StatusVariant;
 
 export const AvatarWithStatus: React.FC<AvatarWithStatusProps> = ({
   name,
@@ -47,15 +71,7 @@ export const AvatarWithStatus: React.FC<AvatarWithStatusProps> = ({
           className,
         )}
       />
-      <div className={statusVariants({ status, size })} />
-      <rect
-        width="16"
-        height="16"
-        x="60"
-        y="60"
-        fill="#d83a42"
-        mask="url(#svg-mask-status-dnd)"
-      ></rect>
+      <Icon status={status} className={statusVariants({ size, status })} />
     </div>
   );
 };
