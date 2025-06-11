@@ -1,7 +1,6 @@
 import { ChevronDownIcon } from "./icons/ChevronDownIcon";
 import { HashtagIcon } from "./icons/HashtagIcon";
-import { PlusCircleIcon } from "./icons/PlusCircleIcon";
-import { Avatar } from "./ui/Avatar";
+import { Messages } from "./Messages";
 import { Tooltip } from "./ui/Tooltip";
 
 const Members = () => {
@@ -9,79 +8,6 @@ const Members = () => {
     <aside className="border-slate-6 bg-slate-2 hidden w-64 border-l pt-5 pl-4 sm:block">
       members
     </aside>
-  );
-};
-
-const Messages = () => {
-  const date = Intl.DateTimeFormat("pt-BR", {
-    month: "2-digit",
-    day: "2-digit",
-    year: "2-digit",
-  }).format(new Date().setDate(9));
-
-  const time = new Intl.DateTimeFormat("en-US", {
-    hour: "2-digit",
-    minute: "2-digit",
-    hour12: false,
-  }).format(new Date());
-
-  return (
-    <div className="bg-slate-2 flex flex-1 flex-col justify-end">
-      <div className="hover:bg-slate-3 flex flex-col gap-4 px-4 py-1.5">
-        <div className="flex gap-4">
-          <Avatar
-            name="Victor"
-            src="./members/victor.jpeg"
-            className="cursor-pointer transition-all active:scale-95"
-          />
-          <div className="flex flex-col">
-            <div className="flex gap-2">
-              <p className="flex h-6 cursor-pointer text-base underline-offset-2 hover:underline">
-                Victor
-              </p>
-              <p className="text-slate-10 flex h-6 items-center pt-[3px] text-xs">
-                {date}, {time}
-              </p>
-            </div>
-            <div className="font-gg-normal text-slate-12 flex flex-col gap-3.5 text-base">
-              <p>Hi there Stream team 👋</p>
-              <p>
-                For this assignment, I picked a Discord feature to showcase, the
-                profile card. Discord is a product I use daily and I love so
-                many things about it. The profile card in particular is a great
-                way for users to express themselves.
-              </p>
-              <p>
-                You can find the profile card by clicking in my name, avatar, or
-                from the members list.
-              </p>
-              <p>I hope you like it :)</p>
-              <p>
-                Code at:{" "}
-                <a
-                  href="https://github.com/victorgaard/stream"
-                  target="_blank"
-                  className="text-anchor hover:underline"
-                >
-                  https://github.com/victorgaard/stream
-                </a>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="p-3">
-        <div className="bg-slate-3 border-slate-6 focus-within:border-slate-8 flex min-h-[52px] items-center gap-1.5 rounded-lg border transition-colors">
-          <button className="text-slate-9 hover:text-slate-10 cursor-pointer self-stretch px-4 transition-colors">
-            <PlusCircleIcon className="size-5" />
-          </button>
-          <input
-            className="placeholder:font-gg-normal placeholder:text-slate-9 font-gg flex-1 text-base outline-0"
-            placeholder="Message #design-engineer-assignment"
-          />
-        </div>
-      </div>
-    </div>
   );
 };
 

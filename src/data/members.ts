@@ -15,6 +15,7 @@ type Status = "online" | "idle" | "busy" | "offline";
 type Member = {
   id: number;
   name: string;
+  avatar: string;
   activity: Activity;
   status: Status;
   roles: string[];
@@ -25,6 +26,7 @@ export const members: Member[] = [
   {
     id: 1,
     name: "Victor",
+    avatar: "./members/victor.jpeg",
     activity: {
       type: "listening",
       metadata: {
