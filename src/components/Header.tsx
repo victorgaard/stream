@@ -12,6 +12,7 @@ export const Header = () => {
           width={20}
           height={20}
           className="size-5 rounded"
+          alt="Stream logo"
         />
         Stream
       </div>

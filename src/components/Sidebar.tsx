@@ -21,6 +21,7 @@ const Avatar: React.FC<Omit<SidebarButtonProps, "tooltip">> = ({
     <img
       src={avatar}
       width={22.15}
+      alt={name}
       className={cn(
         "size-40",
         {
