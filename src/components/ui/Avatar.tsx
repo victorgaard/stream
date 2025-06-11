@@ -1,7 +1,7 @@
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "../../utils/cn";
 
-const avatarVariants = cva("rounded-full", {
+const avatarVariants = cva("rounded-full object-cover", {
   variants: {
     size: {
       sm: "size-8",
@@ -14,7 +14,7 @@ const avatarVariants = cva("rounded-full", {
   },
 });
 
-type AvatarProps = VariantProps<typeof avatarVariants> & {
+export type AvatarProps = VariantProps<typeof avatarVariants> & {
   name: string;
   src?: string;
   className?: string;

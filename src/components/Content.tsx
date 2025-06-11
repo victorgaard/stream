@@ -1,15 +1,8 @@
 import { ChevronDownIcon } from "./icons/ChevronDownIcon";
 import { HashtagIcon } from "./icons/HashtagIcon";
+import { Members } from "./Members";
 import { Messages } from "./Messages";
 import { Tooltip } from "./ui/Tooltip";
-
-const Members = () => {
-  return (
-    <aside className="border-slate-6 bg-slate-2 hidden w-64 border-l pt-5 pl-4 sm:block">
-      members
-    </aside>
-  );
-};
 
 const Channels = () => {
   return (

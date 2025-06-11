@@ -39,7 +39,7 @@ export const Messages = () => {
           />
           <div className="flex flex-col">
             <div className="flex gap-2">
-              <p className="flex h-6 cursor-pointer text-base underline-offset-2 hover:underline">
+              <p className="flex h-6 cursor-pointer text-base underline-offset-1 hover:underline">
                 {user.name}
               </p>
               <p className="text-slate-10 flex h-6 items-center pt-[3px] text-xs">
