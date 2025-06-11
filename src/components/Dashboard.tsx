@@ -4,7 +4,7 @@ import { Sidebar } from "./Sidebar";
 
 const Layout: React.FC<React.PropsWithChildren> = ({ children }) => {
   return (
-    <main className="bg-slate-1 text-slate-11 grid min-h-dvh text-sm antialiased">
+    <main className="bg-slate-1 text-slate-11 grid min-h-dvh text-sm">
       <div className="flex flex-col">{children}</div>
     </main>
   );
