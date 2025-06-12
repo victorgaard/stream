@@ -1,4 +1,4 @@
-<img width="1200" alt="image" src="https://github.com/user-attachments/assets/68f8d0ad-7434-49c1-be0a-70a418df6ced" />
+<img width="1200" alt="image" src="https://github.com/user-attachments/assets/bea79829-fcaf-4baa-ae93-f680eb1e1a76" />
 
 Take home assignment made for Stream Design Engineer hiring process.
 
