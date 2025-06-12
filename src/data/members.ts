@@ -1,4 +1,4 @@
-type Metadata = {
+export type Metadata = {
   provider: string;
   title: string;
   description: string;
@@ -89,7 +89,7 @@ export const members: Member[] = [
     avatar: "./members/knight.jpeg",
     background: "",
     colors: {
-      primary: "#f6ebff",
+      primary: "#ffffff",
       accent: "#0d1e4e",
     },
     bio: "Silent, deadly, and born of Void. Wields the Nail with precision.",

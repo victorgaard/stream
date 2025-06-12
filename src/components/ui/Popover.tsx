@@ -1,6 +1,8 @@
 import * as PopoverRadix from "@radix-ui/react-popover";
+import { isValidElement } from "react";
+import { cn } from "../../utils/cn";
 
-type PopoverProps = React.PropsWithChildren &
+export type PopoverProps = React.PropsWithChildren &
   PopoverRadix.PopoverContentProps & {
     trigger: React.ReactNode;
   };
@@ -11,9 +13,15 @@ export const Popover: React.FC<PopoverProps> = ({
   className,
   ...props
 }) => {
+  const isButton = isValidElement(trigger) && trigger.type === "button";
   return (
     <PopoverRadix.Root>
-      <PopoverRadix.Trigger asChild>{trigger}</PopoverRadix.Trigger>
+      <PopoverRadix.Trigger
+        asChild={isButton}
+        className={cn({ "h-fit w-fit shrink-0": !isButton })}
+      >
+        {trigger}
+      </PopoverRadix.Trigger>
       <PopoverRadix.Portal>
         <PopoverRadix.Content {...props} className={className}>
           {children}

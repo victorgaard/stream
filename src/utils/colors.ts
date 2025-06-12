@@ -10,3 +10,8 @@ export const isColorDark = (hex: string) => {
 
   return brightness < 128;
 };
+
+export const getRandomColor = (colors: string[]) => {
+  const index = Math.floor(Math.random() * colors.length);
+  return colors[index];
+};
