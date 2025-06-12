@@ -32,6 +32,7 @@ export type Member = {
   roles: string[];
   quote?: string;
   isNitro: boolean;
+  subscriberSince?: string;
 };
 
 export const members: Member[] = [
@@ -66,6 +67,7 @@ export const members: Member[] = [
     status: "online",
     roles: ["design engineer", "elite knight", "aram enjoyer"],
     isNitro: true,
+    subscriberSince: "2024-09-16T00:00:00.000Z",
   },
   {
     id: 2,
@@ -123,6 +125,7 @@ export const members: Member[] = [
     },
     roles: ["needlemaster", "guardian"],
     isNitro: true,
+    subscriberSince: "2023-02-25T00:00:00.000Z",
   },
   {
     id: 5,

@@ -27,6 +27,7 @@ export const ProfileCard: React.FC<ProfileCardProps> = ({
   activity,
   roles,
   isNitro,
+  subscriberSince,
   ...popoverProps
 }) => {
   return (
@@ -54,7 +55,13 @@ export const ProfileCard: React.FC<ProfileCardProps> = ({
         avatar={avatar}
       />
       <ProfileCardBody colors={colors} isNitro={isNitro}>
-        <ProfileCardInfo name={name} username={username} bio={bio} />
+        <ProfileCardInfo
+          name={name}
+          username={username}
+          bio={bio}
+          isNitro={isNitro}
+          subscriberSince={subscriberSince}
+        />
         <ProfileCardActivity activity={activity} colors={colors} />
         <ProfileCardRoles roles={roles} colors={colors} />
         <ProfileCardFooter id={id} colors={colors} name={name} />
