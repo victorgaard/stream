@@ -70,7 +70,7 @@ export const Messages: React.FC = () => {
                 </a>
               </p>
               <p>
-                ps: got a little carried away mocking the discord shell lol 🙈
+                ps: got a little carried away mocking the discord shell 🙈
               </p>
             </div>
           </div>

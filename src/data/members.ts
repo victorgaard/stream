@@ -89,7 +89,7 @@ export const members: Member[] = [
     avatar: "./members/knight.jpeg",
     background: "",
     colors: {
-      primary: "#05090a",
+      primary: "#f6ebff",
       accent: "#0d1e4e",
     },
     bio: "Silent, deadly, and born of Void. Wields the Nail with precision.",
@@ -105,7 +105,7 @@ export const members: Member[] = [
     background:
       "https://cdn.discordapp.com/banners/485177376217759765/a_d0df1d9c377c5bb7f3c5f1c592873b19.webp?size=600&animated=true",
     colors: {
-      primary: "#1A1A1E",
+      primary: "#111117",
       accent: "#5865F2",
     },
     bio: "Daughter of Hallownest. Agile, fierce, and always watching.",
@@ -131,7 +131,7 @@ export const members: Member[] = [
     avatar: "./members/quirrel.jpeg",
     background: "",
     colors: {
-      primary: "#f7efe4",
+      primary: "#fafafa",
       accent: "#533B4D",
     },
     bio: "Wanderer and thinker. Fond of Blue Lake and old secrets.",

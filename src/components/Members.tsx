@@ -162,9 +162,9 @@ const MemberButton: React.FC<Member> = ({
           <div className="pt-3">
             <div
               className={cn(
-                "flex flex-col gap-0.5 rounded-lg border border-[hsl(0deg_0%_0%_/_0.075)] bg-[hsla(0,0%,100%,0.25)] p-2 text-xs",
+                "flex flex-col gap-0.5 rounded-lg border border-[hsl(0,0%,0%,0.075)] bg-[hsla(0,0%,100%,0.25)] p-2 text-xs",
                 {
-                  "border-[hsla(0,0%,100%,0.075)] bg-[hsla(0,0%,0%,0.1)]":
+                  "border-[hsla(0,0%,100%,0.075)] bg-[hsla(0,0%,0%,0.15)]":
                     isColorDark(colors.primary),
                 },
               )}
@@ -232,7 +232,7 @@ const MemberButton: React.FC<Member> = ({
             <div
               key={role}
               className={cn(
-                "font-gg-semibold flex h-6 items-center gap-1 rounded-[6px] border border-[hsl(0deg_0%_0%_/_0.15)] p-1 text-xs leading-0 opacity-70",
+                "font-gg-semibold flex h-6 items-center gap-1 rounded-[6px] border border-[hsl(0,0%,0%,0.15)] p-1 text-xs leading-0 opacity-70",
                 {
                   "border-[hsla(0,0%,100%,0.15)]": isColorDark(colors.primary),
                 },
@@ -256,9 +256,9 @@ const MemberButton: React.FC<Member> = ({
           ) : (
             <div
               className={cn(
-                "flex flex-col gap-0.5 rounded-lg border border-[hsl(0deg_0%_0%_/_0.075)] bg-[hsla(0,0%,100%,0.25)] p-2 text-xs",
+                "flex flex-col gap-0.5 rounded-lg border border-[hsl(0,0%,0%,0.075)] bg-[hsla(0,0%,100%,0.25)] p-2 text-xs",
                 {
-                  "border-[hsla(0,0%,100%,0.075)] bg-[hsla(0,0%,0%,0.1)]":
+                  "border-[hsla(0,0%,0%,0.1)] bg-[hsla(0,0%,0%,0.2)]":
                     isColorDark(colors.primary),
                 },
               )}
